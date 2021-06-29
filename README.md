@@ -1,2 +1,6 @@
 # Smart-Home-Ver-1
-This is a Smart Home system. 
+- This is a Smart Home system.
++ Regarding this system, I have fixed the most of the basic errors. If you perform a course project, you will never observe the instability of a system, because a course only takes around 15-20 minutes.
+1. If your system operates when there is no WIFI and the Broker is not operating (for example, your home network or the broker is broken), then you will quit the previous two modes fully to allow the hardware to function normally.
+2. If your system detects an irregularity when you are using it, such as leaking your account password to outsiders or unintentionally operating family members without your permission, you will activate the system. When you enable private mode, you lose total control over the internet.
+3. If your device starts up before the broker is turned on, then after a period of 3 minutes it will reconnect to the broker again, if not, exit the system completely.(Because the broker we often install on Raspberry Pi, ODROID, Asus Tinkerboard, and free brokers on the internet...), or the power supply if you use it is not real. leads to delayed starting and the possibility of hardware failure at any time, and let me add that if you create a very practical Smart Home system, you should not utilize free brokers on the internet, because they will charge or operate in an unstable manner over time.
