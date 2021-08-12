@@ -1,0 +1,478 @@
+- id: '1621705253038'
+  alias: Door Living
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.open_door
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: notify.mobile_app_van_viet
+  mode: single
+- id: '1622971071535'
+  alias: Alarm
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.open_door
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.home_alarm
+    state: armed_away
+  action:
+  - service: notify.mobile_app_cafe_hoang_anh
+    data:
+      message: Có người mở cửa !!!!
+  - service: script.turn_on
+    target:
+      entity_id: script.alarm
+  - service: media_player.play_media
+    data:
+      media_content_id: /local/mp3/Alarm/alarm1.mp3
+      media_content_type: music
+    target:
+      entity_id:
+      - media_player.83fa3f7d_03499094
+      - media_player.83fa3f7d_03499094
+      - media_player.5f06c387_4d77e838
+      - media_player.25b1b98a_1ef6885c
+      - media_player.83fa3f7d_03499094
+      - media_player.929dc978_b363855c
+      - media_player.25b1b98a_1ef6885c
+      - media_player.712997fc_a7e07eef
+  mode: single
+- id: '1622993576920'
+  alias: Stop Alarm Music
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.home_alarm
+    from: armed_away
+    to: disarmed
+  condition: []
+  action:
+  - service: script.alarm_night_off
+  - service: media_player.media_stop
+    target:
+      entity_id:
+      - media_player.83fa3f7d_03499094
+      - media_player.83fa3f7d_03499094
+      - media_player.5f06c387_4d77e838
+      - media_player.25b1b98a_1ef6885c
+      - media_player.712997fc_a7e07eef
+  mode: single
+- id: '1623067307810'
+  alias: OFF ALL
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_all
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.off_all
+  mode: single
+- id: '1623067899054'
+  alias: OFF Alll
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_all
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.off_all
+  mode: single
+- id: '1623073870537'
+  alias: OFF ALL
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_all
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: light.turn_off
+    target:
+      entity_id:
+      - light.off_all_living
+      - light.off_all_bedroom
+  mode: single
+- id: '1623076830020'
+  alias: OFF ALL BEDROOM
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_all_bedroom
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.off_all_bedroom
+  mode: single
+- id: '1623077035015'
+  alias: OFF ALL LIVING
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_all_living
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.off_all_living
+  mode: single
+- id: '1623077651037'
+  alias: ON 1 Or 2 Living
+  description: Khi bật 1 hoặc 2 thiết bị thì off living đổi màu có người
+  trigger:
+  - platform: state
+    entity_id: fan.fan_livng
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: light.light_living
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: light.off_rgb
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.off_all_living
+  mode: single
+- id: '1623077974849'
+  alias: BedRoom Entities
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: fan.fan_bedroom
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: light.light_bedroom
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.off_all_bedroom
+  mode: single
+- id: '1623078086714'
+  alias: ON ENTITES ALL HOME
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_all_bedroom
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: light.off_all_living
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.off_all
+  mode: single
+- id: '1623143178817'
+  alias: Temp Living
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.temprature_living
+    below: '50'
+    above: '35'
+  condition: []
+  action:
+  - service: media_player.play_media
+    target:
+      entity_id:
+      - media_player.25b1b98a_1ef6885c
+      - media_player.83fa3f7d_03499094
+      - media_player.712997fc_a7e07eef
+    data:
+      media_content_id: /local/mp3/CamBien/Living/Nhiet-Do-Cao.mp3
+      media_content_type: music
+  - service: notify.mobile_app_van_viet
+    data:
+      message: Nhiệt Độ Phòng Khách Tăng Cao
+  mode: single
+- id: '1623146715425'
+  alias: ReedBook Music
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.reed_book
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.play_media
+    target:
+      entity_id:
+      - media_player.25b1b98a_1ef6885c
+      - media_player.1ccfbc88_02a6f027
+      - media_player.83fa3f7d_03499094
+      - media_player.5f06c387_4d77e838
+      - media_player.712997fc_a7e07eef
+    data:
+      media_content_id: /local/mp3/Music/ReedBook.mp3
+      media_content_type: Music
+  mode: single
+- id: '1623147036156'
+  alias: Stop Music RGB
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_rgb
+    from: 'on'
+    to: 'off'
+  - platform: state
+    entity_id: light.sleep
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: light.kara
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.media_stop
+    target:
+      entity_id:
+      - media_player.25b1b98a_1ef6885c
+      - media_player.83fa3f7d_03499094
+      - media_player.712997fc_a7e07eef
+  mode: single
+- id: '1623147645275'
+  alias: Chill Music
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.normal
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.play_media
+    target:
+      entity_id:
+      - media_player.1ccfbc88_02a6f027
+      - media_player.83fa3f7d_03499094
+      - media_player.5f06c387_4d77e838
+      - media_player.25b1b98a_1ef6885c
+      - media_player.712997fc_a7e07eef
+      - media_player.25b1b98a_1ef6885c
+    data:
+      media_content_id: /local/mp3/Music/chill.mp3
+      media_content_type: music
+  mode: single
+- id: '1623148079365'
+  alias: Love Music
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.red
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.play_media
+    target:
+      entity_id:
+      - media_player.83fa3f7d_03499094
+      - media_player.5f06c387_4d77e838
+      - media_player.25b1b98a_1ef6885c
+      - media_player.1ccfbc88_02a6f027
+      - media_player.712997fc_a7e07eef
+    data:
+      media_content_id: /local/mp3/Music/love.mp3
+      media_content_type: Music
+  mode: single
+- id: '1623560295601'
+  alias: On Light Sleep
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.light_bedroom
+    from: 'on'
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: light.off_all_bedroom
+    state: 'on'
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.light_bedroom_sleep
+  mode: single
+- id: '1623656603672'
+  alias: Close Door
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.home_alarm
+    from: disarmed
+    to: arming
+  condition:
+  - condition: state
+    entity_id: switch.servo_door
+    state: 'on'
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.servo_door
+  mode: single
+- id: '1623657147775'
+  alias: Open Door
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.home_alarm
+    to: disarmed
+    from: armed_away
+  condition:
+  - condition: state
+    entity_id: switch.servo_door
+    state: 'off'
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.servo_door
+  mode: single
+- id: '1624159348478'
+  alias: Auto Keo Rem
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.nha_uv_index
+    above: '2'
+    below: '50'
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.window_curtains_open
+  mode: single
+- id: '1624159432660'
+  alias: Auto Dong Rem
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.nha_uv_index
+    above: '2'
+    below: '0'
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.window_curtains_open
+  mode: single
+- id: '1624421012451'
+  alias: On Light ReedBook
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.reed_book
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.on_light_reedbook
+  mode: single
+- id: '1624421374209'
+  alias: On Light Chill
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.normal
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.on_light_chill
+  mode: single
+- id: '1624421586130'
+  alias: On Light Kara
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.kara
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.on_light_kara
+  mode: single
+- id: '1624421715384'
+  alias: On Light Sleep
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.sleep
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.on_light_sleep
+  mode: single
+- id: '1624421844178'
+  alias: On Light Red
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.red
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.on_light_red
+  mode: single
+- id: '1624421991867'
+  alias: OFF RGB
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.off_rgb
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: script.turn_on
+    target:
+      entity_id: script.on_off_rgb
+  mode: single

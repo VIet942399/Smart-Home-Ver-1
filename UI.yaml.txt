@@ -1,0 +1,1286 @@
+animated_background:
+  default_url: 'https://cdn.flixel.com/flixel/v26zyfd6yf0r33s46vpe.hd.mp4'
+  entity: sensor.time_formatted
+  state_url:
+    '10':
+      - 'https://cdn.flixel.com/flixel/hrkw2m8eofib9sk7t1v2.hd.mp4'
+      - /local/video/Trua/videoplayback_Trim.mp4
+      - 'https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4'
+      - /local/video/vietnam.mp4
+      - 'https://cdn.flixel.com/flixel/qed6wvf2igukiioykg3r.hd.mp4'
+    '11':
+      - /local/video/vietnam.mp4
+    '12':
+      - /local/video/vietnam.mp4
+    '13':
+      - 'https://cdn.flixel.com/flixel/3rd72eezaj6d23ahlo7y.hd.mp4'
+      - /local/video/vietnam.mp4
+      - 'https://cdn.flixel.com/flixel/hrkw2m8eofib9sk7t1v2.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/zjqsoc6ecqhntpl5vacs.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/guwb10mfddctfvwioaex.hd.mp4'
+    '14':
+      - /local/video/Chieu/hoian_Trim.mp4
+      - 'https://cdn.flixel.com/flixel/e95h5cqyvhnrk4ytqt4q.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/f0w23bd0enxur5ff0bxz.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/rrgta099ulami3zb9fd2.hd.mp4'
+    '15':
+      - /local/video/Sang/8h.mp4
+      - /local/video/Chieu/hoian_Trim.mp4
+      - /local/video/Trua/videoplayback_Trim.mp4
+      - /local/video/Trua/12h.mp4
+      - 'https://cdn.flixel.com/flixel/e95h5cqyvhnrk4ytqt4q.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/f0w23bd0enxur5ff0bxz.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/rrgta099ulami3zb9fd2.hd.mp4'
+    '16':
+      - /local/video/Trua/12h.mp4
+      - 'https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/l2bjw34wnusyf5q2qq3p.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/13e0s6coh6ayapvdyqnv.hd.mp4'
+    '17':
+      - 'https://cdn.flixel.com/flixel/vwqzlk4turo2449be9uf.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/e95h5cqyvhnrk4ytqt4q.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/f0w23bd0enxur5ff0bxz.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/rrgta099ulami3zb9fd2.hd.mp4'
+    '18':
+      - /local/video/Chieu/6hChieu.mp4
+      - /local/video/Chieu/6hPm.mp4
+    '19':
+      - /local/video/Toi/Ha Noi_Trim.mp4
+    '20':
+      - /local/video/Toi/DaNang8h.mp4
+      - 'https://cdn.flixel.com/flixel/rosz2gi676xhkiw1ut6i.hd.mp4'
+    '21':
+      - /local/video/Toi/CaRong9h.mp4
+      - 'https://cdn.flixel.com/flixel/rosz2gi676xhkiw1ut6i.hd.mp4'
+    '22':
+      - /local/video/Khuya/CauRongKhuya.mp4
+    '23':
+      - /local/video/Toi/DaNang8h.mp4
+      - /local/video/Khuya/CauRongKhuya.mp4
+    '05':
+      - /local/video/Sang/5hsang.mp4
+    '06':
+      - /local/video/Sang/6h.mp4
+    '07':
+      - /local/video/Sang/7h.mp4
+    08:
+      - /local/video/Sang/8h.mp4
+      - 'https://cdn.flixel.com/flixel/qed6wvf2igukiioykg3r.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/aorl3skmssy7udwopk22.hd.mp4'
+    09:
+      - /local/video/Sang/9h.mp4
+      - 'https://cdn.flixel.com/flixel/13e0s6coh6ayapvdyqnv.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/3rd72eezaj6d23ahlo7y.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4'
+    '00':
+      - /local/video/Khuya/CauQuay12h.mp4
+views:
+  - title: Security
+    path: security
+    panel: true
+    icon: 'mdi:security'
+    visible:
+      - user: 7865da585727423c903ec96aa75f9fed
+      - user: 3465128820b149a780b3619a90957259
+    badges: []
+    cards:
+      - type: alarm-panel
+        entity: alarm_control_panel.home_alarm
+        states:
+          - arm_away
+        theme: ios-dark-mode
+        name: Security
+  - title: Button Home and Camera
+    path: button-home
+    icon: 'mdi:camera-switch'
+    theme: ios-dark-mode
+    panel: false
+    visible:
+      - user: a6aaae1fa29e46c1b10bc178556c4939
+      - user: 7865da585727423c903ec96aa75f9fed
+      - user: 4ccaec5acfa540a9a1eb7427ed3579c3
+      - user: f8aea87c0e0f4a13a9558a0d67334f7a
+    badges: []
+    cards:
+      - type: grid
+        cards:
+          - type: entities
+            entities:
+              - entity: binary_sensor.open_door
+                name: Door
+              - entity: light.light_living
+                name: Light
+              - entity: fan.fan_livng
+                name: Fan
+              - entity: light.light_san
+                icon: 'mdi:outdoor-lamp'
+                name: Courtyard
+            title: Living Room
+            state_color: true
+          - type: 'custom:swipe-card'
+            card_width: 200px
+            start_card: 3
+            parameters:
+              effect: coverflow
+              grabCursor: true
+              centeredSlides: true
+              slidesPerView: auto
+              coverflowEffect:
+                rotate: 50
+                stretch: 0
+                depth: 100
+                modifier: 1
+                slideShadows: true
+              pagination:
+                type: bullets
+            cards:
+              - type: 'custom:mini-graph-card'
+                name: Temp
+                entities:
+                  - sensor.temprature_living
+                line_color: yellow
+                line_width: 8
+                font_size: 75
+              - type: 'custom:mini-graph-card'
+                name: Hum
+                entities:
+                  - sensor.humunity_living
+                line_color: blue
+                line_width: 8
+                font_size: 75
+              - type: 'custom:mini-graph-card'
+                name: PM 2.5
+                entities:
+                  - sensor.pm_living
+                line_color: white
+                line_width: 8
+                font_size: 75
+              - type: 'custom:mini-graph-card'
+                name: AQI
+                entities:
+                  - sensor.aqi_living
+                line_color: green
+                line_width: 8
+                font_size: 75
+          - type: 'custom:webrtc-camera'
+            url: 'rtsp://admin:Vietnguyen123_@192.168.0.4:554/onvif1'
+        square: false
+        columns: 1
+      - type: grid
+        cards:
+          - type: grid
+            cards:
+              - type: entities
+                entities:
+                  - entity: light.light_bedroom
+                    name: Light
+                  - entity: fan.fan_bedroom
+                    name: Fan
+                  - entity: light.light_bedroom_sleep
+                    name: 'Sleep '
+                    icon: 'mdi:bed-outline'
+                  - entity: switch.window_curtains_open
+                    icon: 'mdi:blinds-open'
+                    name: Curtains
+                title: Bed Room
+                state_color: true
+              - type: grid
+                cards:
+                  - type: gauge
+                    entity: sensor.humunity_bedroom
+                    min: 0
+                    max: 100
+                    name: Humunity
+                    theme: ios-dark-mode
+                    severity:
+                      green: 50
+                      yellow: 70
+                      red: 100
+                  - type: gauge
+                    entity: sensor.temprature_bedroom
+                    min: 0
+                    name: Temprature
+                    max: 50
+                    severity:
+                      green: 30
+                      yellow: 40
+                      red: 50
+                  - type: gauge
+                    entity: sensor.pm_bedroom
+                    min: 0
+                    name: PM 2.5
+                    max: 500
+                    severity:
+                      green: 50
+                      yellow: 150
+                      red: 250
+                square: true
+              - type: 'custom:webrtc-camera'
+                url: 'rtsp://admin:Vietnguyen123_@192.168.0.19:554/onvif1'
+            columns: 1
+            square: false
+        columns: 1
+        square: false
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.reed_book
+            name: ReadBook
+            icon: 'mdi:book-open-page-variant'
+            color: Yellow
+          - type: 'custom:button-card'
+            entity: light.normal
+            name: Chill
+            icon: 'mdi:led-strip-variant'
+            color: Blue
+          - type: 'custom:button-card'
+            entity: light.kara
+            name: Kara
+            icon: 'mdi:account-music-outline'
+            color: Lime
+          - type: 'custom:button-card'
+            entity: light.sleep
+            name: Sleep
+            icon: 'mdi:seat-individual-suite'
+            color: Magenta
+          - type: 'custom:button-card'
+            entity: light.red
+            name: Love
+            icon: 'mdi:clover'
+            color: Red
+          - type: 'custom:button-card'
+            tap_action:
+              action: toggle
+            entity: light.off_rgb
+            icon: 'mdi:flash-off'
+            name: RGB
+      - type: 'custom:weather-card'
+        number_of_forecasts: '5'
+        hourly_forecast: true
+        entity: weather.home
+        details: true
+      - type: entities
+        entities:
+          - entity: sensor.date_time
+          - entity: sensor.vietnam_coronavirus_current
+          - entity: sensor.vietnam_coronavirus_confirmed
+      - type: alarm-panel
+        entity: alarm_control_panel.home_alarm
+        states:
+          - arm_away
+        theme: ios-dark-mode
+        name: Security
+  - icon: 'mdi:gesture-tap-button'
+    title: Button
+    path: camera-and-button
+    panel: false
+    visible:
+      - user: e5964d97733947ba840d1ee97fd847d9
+      - user: 7865da585727423c903ec96aa75f9fed
+    badges: []
+    cards:
+      - type: grid
+        cards:
+          - type: 'custom:button-card'
+            name: Home
+            icon: 'mdi:home-flood'
+            state:
+              - value: 'off'
+                color: 'rgb(135, 117, 244)'
+                icon: 'mdi:home-export-outline'
+                name: Leave
+            tap_action:
+              action: toggle
+            entity: light.off_all
+          - type: 'custom:button-card'
+            name: Living
+            icon: 'mdi:human-capacity-decrease'
+            color: red
+            state:
+              - value: 'off'
+                name: Leave
+            tap_action:
+              action: toggle
+            entity: light.off_all_living
+          - type: 'custom:button-card'
+            name: BedRoom
+            icon: 'mdi:human-male-female'
+            color: red
+            state:
+              - value: 'off'
+                name: Leave
+            tap_action:
+              action: toggle
+            entity: light.off_all_bedroom
+        square: false
+        columns: 3
+      - type: grid
+        cards:
+          - type: 'custom:button-card'
+            name: BedRoom
+            icon: 'mdi:lightbulb'
+            state:
+              - value: 'on'
+                color: yellow
+                icon: 'mdi:lightbulb-on'
+            tap_action:
+              action: toggle
+            entity: light.light_bedroom
+          - type: 'custom:button-card'
+            name: BedRoom
+            state:
+              - value: 'on'
+                color: 'rgb(200, 95, 236)'
+                styles:
+                  icon:
+                    - animation:
+                        - rotating 1.5s linear infinite
+            tap_action:
+              action: toggle
+            entity: fan.fan_bedroom
+          - type: 'custom:button-card'
+            name: BedRoom
+            icon: 'mdi:bed-empty'
+            state:
+              - value: 'on'
+                color: green
+                icon: 'mdi:bed'
+            tap_action:
+              action: toggle
+            entity: light.light_bedroom_sleep
+          - type: 'custom:button-card'
+            name: BedRoom
+            icon: 'mdi:blinds-open'
+            color: 'rgb(197, 207, 103)'
+            state:
+              - value: 'off'
+                color: 'rgb(197, 255, 103)'
+                icon: 'mdi:blinds'
+            tap_action:
+              action: toggle
+            entity: switch.window_curtains_open
+        square: false
+        columns: 4
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.reed_book
+            name: ReadBook
+            icon: 'mdi:book-open-page-variant'
+            color: Yellow
+          - type: 'custom:button-card'
+            entity: light.normal
+            name: Chill
+            icon: 'mdi:led-strip-variant'
+            color: Blue
+          - type: 'custom:button-card'
+            entity: light.kara
+            name: Kara
+            icon: 'mdi:account-music-outline'
+            color: Lime
+          - type: 'custom:button-card'
+            entity: light.sleep
+            name: Sleep
+            icon: 'mdi:seat-individual-suite'
+            color: Magenta
+          - type: 'custom:button-card'
+            entity: light.red
+            name: Love
+            icon: 'mdi:clover'
+            color: Red
+          - type: 'custom:button-card'
+            tap_action:
+              action: toggle
+            entity: light.off_rgb
+            icon: 'mdi:flash-off'
+            name: RGB
+      - type: grid
+        cards:
+          - type: 'custom:button-card'
+            name: Living
+            icon: 'mdi:lightbulb-outline'
+            state:
+              - value: 'on'
+                icon: 'mdi:lightbulb-on-outline'
+                color: yellow
+            tap_action:
+              action: toggle
+            entity: light.light_living
+          - type: 'custom:button-card'
+            name: Living
+            state:
+              - value: 'on'
+                color: red
+                styles:
+                  icon:
+                    - animation:
+                        - rotating 1.5s linear infinite
+            tap_action:
+              action: toggle
+            entity: fan.fan_livng
+          - type: 'custom:button-card'
+            name: Living
+            icon: 'mdi:outdoor-lamp'
+            state:
+              - value: 'on'
+                color: 'rgb(234, 179, 0)'
+            tap_action:
+              action: toggle
+            entity: light.light_san
+          - type: 'custom:button-card'
+            name: Living
+            icon: 'mdi:door-closed'
+            state:
+              - value: 'on'
+                color: Red
+                icon: 'mdi:door-open'
+            tap_action:
+              action: toggle
+            entity: switch.servo_door
+          - type: 'custom:button-card'
+            name: Front Door
+            icon: 'mdi:door-closed'
+            state:
+              - value: 'on'
+                color: Red
+                icon: 'mdi:door-open'
+            tap_action:
+              action: toggle
+            entity: binary_sensor.open_door
+        columns: 5
+        square: false
+      - type: grid
+        cards:
+          - type: alarm-panel
+            entity: alarm_control_panel.home_alarm
+            states:
+              - arm_away
+            theme: ios-dark-mode
+            name: Security
+        square: false
+        columns: 1
+  - title: '3D Floor Plan '
+    path: ''
+    panel: true
+    icon: 'mdi:home-flood'
+    theme: clear-dark
+    visible:
+      - user: e5964d97733947ba840d1ee97fd847d9
+      - user: 7865da585727423c903ec96aa75f9fed
+    badges: []
+    cards:
+      - type: picture-elements
+        image: local\lovelace\floorplan\back.jpg
+        elements:
+          - entity: light.light_bedroom
+            title: Office Main Light
+            hold_action:
+              action: none
+            tap_action:
+              action: toggle
+            image: /local/lovelace/icon/icon_light_outside_off.png
+            state_filter:
+              'off': brightness(100%) saturate(0.8)
+              'on': brightness(140%) saturate(1.5)
+            state_image:
+              'on': /local/lovelace/icon/icon_light_outside_on.png
+            style:
+              left: 80%
+              top: 21.5%
+              width: 3%
+            type: image
+          - entity: fan.fan
+            title: Office lighting Overlay
+            hold_action:
+              action: none
+            tap_action:
+              action: none
+            image: /local/lovelace/overlay/1x1_trans.png
+            state_image:
+              'on': /local/lovelace/overlay/pc_overlay.png
+            style:
+              left: 60%
+              top: 20%
+              width: 10%
+              opacity: 0.9
+            type: image
+          - entity: sensor.temprature_living
+            title: Nhiet Do
+            style:
+              color: Red
+              left: 60%
+              top: 40%
+              width: 10%
+              opacity: 0.9
+            type: state-label
+  - title: Family
+    path: ''
+    icon: 'mdi:account-group'
+    panel: false
+    badges: []
+    cards:
+      - type: grid
+        cards:
+          - type: grid
+            cards:
+              - type: grid
+                cards:
+                  - type: 'custom:button-card'
+                    name: Home
+                    icon: 'mdi:home-flood'
+                    state:
+                      - value: 'off'
+                        color: 'rgb(135, 117, 244)'
+                        icon: 'mdi:home-export-outline'
+                        name: Leave
+                    tap_action:
+                      action: toggle
+                    entity: light.off_all
+                  - type: 'custom:button-card'
+                    name: Living
+                    icon: 'mdi:human-capacity-decrease'
+                    color: red
+                    state:
+                      - value: 'off'
+                        name: Leave
+                    tap_action:
+                      action: toggle
+                    entity: light.off_all_living
+                  - type: 'custom:button-card'
+                    name: BedRoom
+                    icon: 'mdi:human-male-female'
+                    color: red
+                    state:
+                      - value: 'off'
+                        name: Leave
+                    tap_action:
+                      action: toggle
+                    entity: light.off_all_bedroom
+                square: false
+            columns: 1
+            square: false
+          - type: alarm-panel
+            entity: alarm_control_panel.home_alarm
+            states:
+              - arm_away
+            theme: ios-dark-mode
+            name: Security
+          - type: grid
+            cards:
+              - type: 'custom:button-card'
+                name: Living
+                icon: 'mdi:lightbulb-outline'
+                state:
+                  - value: 'on'
+                    icon: 'mdi:lightbulb-on-outline'
+                    color: yellow
+                tap_action:
+                  action: toggle
+                entity: light.light_living
+              - type: 'custom:button-card'
+                name: Living
+                state:
+                  - value: 'on'
+                    color: red
+                    styles:
+                      icon:
+                        - animation:
+                            - rotating 1.5s linear infinite
+                tap_action:
+                  action: toggle
+                entity: fan.fan_livng
+              - type: 'custom:button-card'
+                name: Living
+                icon: 'mdi:outdoor-lamp'
+                state:
+                  - value: 'on'
+                    color: 'rgb(234, 179, 0)'
+                tap_action:
+                  action: toggle
+                entity: light.light_san
+              - type: 'custom:button-card'
+                name: Living
+                icon: 'mdi:door-closed'
+                state:
+                  - value: 'on'
+                    color: Red
+                    icon: 'mdi:door-open'
+                tap_action:
+                  action: toggle
+                entity: switch.servo_door
+              - type: 'custom:button-card'
+                name: Front Door
+                icon: 'mdi:door-closed'
+                state:
+                  - value: 'on'
+                    color: Red
+                    icon: 'mdi:door-open'
+                tap_action:
+                  action: toggle
+                entity: binary_sensor.open_door
+            columns: 5
+            square: false
+          - type: grid
+            cards:
+              - type: 'custom:button-card'
+                entity: light.reed_book
+                name: ReadBook
+                icon: 'mdi:book-open-page-variant'
+                color: Yellow
+              - type: 'custom:button-card'
+                entity: light.normal
+                name: Chill
+                icon: 'mdi:led-strip-variant'
+                color: Blue
+              - type: 'custom:button-card'
+                entity: light.kara
+                name: Kara
+                icon: 'mdi:account-music-outline'
+                color: Lime
+              - type: 'custom:button-card'
+                name: Sleep
+                icon: 'mdi:bed-empty'
+                state:
+                  - value: 'on'
+                    color: pink
+                    icon: 'mdi:bed'
+                tap_action:
+                  action: toggle
+                entity: light.sleep
+              - type: 'custom:button-card'
+                entity: light.red
+                name: Love
+                icon: 'mdi:clover'
+                color: Red
+              - type: 'custom:button-card'
+                tap_action:
+                  action: toggle
+                entity: light.off_rgb
+                icon: 'mdi:flash-off'
+                name: RGB
+            columns: 6
+            square: false
+          - type: 'custom:swipe-card'
+            card_width: 200px
+            start_card: 3
+            parameters:
+              effect: coverflow
+              grabCursor: true
+              centeredSlides: true
+              slidesPerView: auto
+              coverflowEffect:
+                rotate: 50
+                stretch: 0
+                depth: 100
+                modifier: 1
+                slideShadows: true
+              pagination:
+                type: bullets
+            cards:
+              - type: 'custom:tempometer-gauge-card'
+                entity: sensor.temprature_living
+                min: 0
+                max: 50
+                title: Living Temp
+                card_style: custom
+                icon1: 'mdi:thermometer-low'
+                icon2: 'mdi:thermometer'
+                icon3: 'mdi:thermometer-alert'
+                severity:
+                  green: 0
+                  yellow: 30
+                  red: 40
+                  max: 50
+              - type: 'custom:tempometer-gauge-card'
+                entity: sensor.humunity_living
+                min: 0
+                max: 100
+                title: Living Hum
+                card_style: custom
+                icon1: 'mdi:water-check-outline'
+                icon2: 'mdi:water-percent'
+                icon3: 'mdi:water-percent-alert'
+                severity:
+                  green: 0
+                  yellow: 80
+                  red: 90
+                  max: 100
+              - type: 'custom:tempometer-gauge-card'
+                entity: sensor.pm_living
+                min: 0
+                max: 500
+                title: Living PM 2.5
+                card_style: custom
+                icon1: 'mdi:baby-face-outline'
+                icon2: 'mdi:emoticon-sick-outline'
+                icon3: 'mdi:face-mask'
+                severity:
+                  green: 0
+                  yellow: 26
+                  red: 51
+                  max: 500
+              - type: 'custom:tempometer-gauge-card'
+                entity: sensor.aqi_living
+                min: 0
+                max: 500
+                title: Living AQI
+                card_style: custom
+                icon1: 'mdi:baby-face-outline'
+                icon2: 'mdi:emoticon-sick-outline'
+                icon3: 'mdi:face-mask'
+                severity:
+                  green: 0
+                  yellow: 51
+                  red: 101
+                  max: 500
+          - type: grid
+            cards:
+              - type: 'custom:button-card'
+                name: BedRoom
+                icon: 'mdi:lightbulb'
+                state:
+                  - value: 'on'
+                    color: yellow
+                    icon: 'mdi:lightbulb-on'
+                tap_action:
+                  action: toggle
+                entity: light.light_bedroom
+              - type: 'custom:button-card'
+                name: BedRoom
+                state:
+                  - value: 'on'
+                    color: 'rgb(200, 95, 236)'
+                    styles:
+                      icon:
+                        - animation:
+                            - rotating 1.5s linear infinite
+                tap_action:
+                  action: toggle
+                entity: fan.fan_bedroom
+              - type: 'custom:button-card'
+                name: BedRoom
+                icon: 'mdi:bed-empty'
+                state:
+                  - value: 'on'
+                    color: green
+                    icon: 'mdi:bed'
+                tap_action:
+                  action: toggle
+                entity: light.light_bedroom_sleep
+              - type: 'custom:button-card'
+                name: BedRoom
+                icon: 'mdi:blinds-open'
+                color: 'rgb(197, 207, 103)'
+                state:
+                  - value: 'off'
+                    color: 'rgb(197, 255, 103)'
+                    icon: 'mdi:blinds'
+                tap_action:
+                  action: toggle
+                entity: switch.window_curtains_open
+            square: false
+            columns: 4
+          - type: 'custom:swipe-card'
+            card_width: 180px
+            start_card: 3
+            parameters:
+              effect: coverflow
+              grabCursor: true
+              centeredSlides: true
+              slidesPerView: auto
+              coverflowEffect:
+                rotate: 50
+                stretch: 0
+                depth: 100
+                modifier: 1
+                slideShadows: true
+              pagination:
+                type: bullets
+            cards:
+              - type: gauge
+                min: 0
+                max: 50
+                entity: sensor.temprature_bedroom
+                severity:
+                  green: 0
+                  yellow: 30
+                  red: 40
+                name: BedRoom Temp
+              - type: gauge
+                min: 0
+                max: 100
+                entity: sensor.humunity_bedroom
+                severity:
+                  green: 0
+                  yellow: 80
+                  red: 90
+                name: BedRoom Hum
+              - type: gauge
+                min: 0
+                max: 500
+                entity: sensor.pm_bedroom
+                severity:
+                  green: 0
+                  yellow: 26
+                  red: 51
+                name: BedRoom PM 2.5
+              - type: gauge
+                min: 0
+                max: 500
+                entity: sensor.aqi_living
+                severity:
+                  green: 0
+                  yellow: 51
+                  red: 101
+                name: AQI BedRoom
+          - type: 'custom:swipe-card'
+            cards:
+              - type: 'custom:webrtc-camera'
+                url: 'rtsp://admin:Vietnguyen123_@192.168.0.4:554/onvif1'
+              - type: 'custom:webrtc-camera'
+                url: 'rtsp://admin:Vietnguyen123_@192.168.0.19:554/onvif1'
+        columns: 1
+        square: false
+  - title: TV LG Admin
+    path: ''
+    icon: 'mdi:remote-tv'
+    visible:
+      - user: 7865da585727423c903ec96aa75f9fed
+    badges: []
+    cards:
+      - type: media-control
+        entity: media_player.lg_webos_smart_tv
+      - type: 'custom:lg-remote-control'
+        entity: media_player.lg_webos_smart_tv
+        dimensions:
+          scale: 0.8
+          border_width: 5px
+        colors:
+          buttons: var(--deactive-background-button-color)
+          texts: pink
+          background: 'rgb(94,15,234)'
+          Border: 'rgb((255,112,243)'
+        sources:
+          - name: Netflix
+            icon: 'mdi:netflix'
+          - name: Disney
+            icon: disney
+          - name: Chương trình phát
+            icon: dazn
+          - name: YouTube
+            icon: 'mdi:youtube-tv'
+      - type: media-control
+        entity: media_player.living_room_tv
+      - type: 'custom:lg-remote-control'
+        entity: media_player.living_room_tv
+        dimensions:
+          scale: 0.8
+          border_width: 5px
+        colors:
+          buttons: var(--deactive-background-button-color)
+          texts: pink
+          background: 'rgb(94,15,24)'
+          Border: 'rgb((255,112,243)'
+        sources:
+          - name: Netflix
+            icon: 'mdi:netflix'
+          - name: Disney
+            icon: disney
+          - name: Chương trình phát
+            icon: dazn
+          - name: YouTube
+            icon: 'mdi:youtube-tv'
+  - icon: 'mdi:remote-tv'
+    title: TV BedRoom
+    path: tv-bedroom
+    badges: []
+    cards:
+      - type: media-control
+        entity: media_player.lg_webos_smart_tv
+      - type: 'custom:lg-remote-control'
+        entity: media_player.lg_webos_smart_tv
+        dimensions:
+          scale: 0.8
+          border_width: 5px
+        colors:
+          buttons: var(--deactive-background-button-color)
+          texts: pink
+          background: 'rgb(94,15,234)'
+          Border: 'rgb((255,112,243)'
+        sources:
+          - name: Netflix
+            icon: 'mdi:netflix'
+          - name: Disney
+            icon: disney
+          - name: Chương trình phát
+            icon: dazn
+          - name: YouTube
+            icon: 'mdi:youtube-tv'
+  - icon: 'mdi:human-male-female'
+    title: BedRoom
+    path: bedroom
+    badges: []
+    cards:
+      - type: grid
+        cards:
+          - type: grid
+            cards:
+              - type: grid
+                cards:
+                  - type: 'custom:button-card'
+                    name: BedRoom
+                    icon: 'mdi:human-male-female'
+                    color: red
+                    state:
+                      - value: 'off'
+                        name: Leave
+                    tap_action:
+                      action: toggle
+                    entity: light.off_all_bedroom
+                  - type: 'custom:button-card'
+                    name: Curtains
+                    icon: 'mdi:blinds-open'
+                    state:
+                      - value: 'on'
+                        color: 'rgb(197, 255, 103)'
+                        icon: 'mdi:blinds'
+                    tap_action:
+                      action: toggle
+                    entity: switch.window_curtains_open
+                square: false
+                columns: 2
+            square: false
+            columns: 1
+          - type: grid
+            cards:
+              - type: grid
+                cards:
+                  - type: 'custom:button-card'
+                    name: BedRoom
+                    state:
+                      - value: 'on'
+                        color: 'rgb(200, 95, 236)'
+                        styles:
+                          icon:
+                            - animation:
+                                - rotating 1.5s linear infinite
+                    tap_action:
+                      action: toggle
+                    entity: fan.fan_bedroom
+                  - type: 'custom:button-card'
+                    name: Sleep
+                    icon: 'mdi:bed-empty'
+                    state:
+                      - value: 'on'
+                        color: green
+                        icon: 'mdi:bed'
+                    tap_action:
+                      action: toggle
+                    entity: light.light_bedroom_sleep
+                  - type: 'custom:button-card'
+                    name: BedRoom
+                    icon: 'mdi:lightbulb'
+                    state:
+                      - value: 'on'
+                        color: yellow
+                        icon: 'mdi:lightbulb-on'
+                    tap_action:
+                      action: toggle
+                    entity: light.light_bedroom
+                  - type: gauge
+                    entity: sensor.pm_bedroom
+                    min: 0
+                    name: BedRooom PM 2.5
+                    max: 500
+                    severity:
+                      green: 50
+                      yellow: 150
+                      red: 250
+                  - type: gauge
+                    entity: sensor.humunity_bedroom
+                    min: 0
+                    max: 100
+                    name: BedRooom Hum
+                    theme: ios-dark-mode
+                    severity:
+                      green: 50
+                      yellow: 70
+                      red: 100
+                  - type: gauge
+                    entity: sensor.temprature_bedroom
+                    min: 0
+                    name: BedRooom Temp
+                    max: 50
+                    severity:
+                      green: 30
+                      yellow: 40
+                      red: 50
+                  - type: grid
+                    cards: []
+                    square: false
+                    columns: 2
+                square: false
+            square: false
+            columns: 1
+          - type: 'custom:swipe-card'
+            cards:
+              - type: 'custom:webrtc-camera'
+                url: 'rtsp://admin:Vietnguyen123_@192.168.0.4:554/onvif1'
+        columns: 1
+        square: false
+  - title: Test
+    path: test
+    badges: []
+    cards:
+      - type: entities
+        entities:
+          - sensor.nha_uv_index
+      - type: 'custom:swipe-card'
+        card_width: 200px
+        start_card: 3
+        parameters:
+          effect: coverflow
+          grabCursor: true
+          centeredSlides: true
+          slidesPerView: auto
+          coverflowEffect:
+            rotate: 50
+            stretch: 0
+            depth: 100
+            modifier: 1
+            slideShadows: true
+          pagination:
+            type: bullets
+        cards:
+          - type: 'custom:tempometer-gauge-card'
+            entity: sensor.temprature_living
+            min: 0
+            max: 50
+            title: Living Temp
+            card_style: custom
+            icon1: 'mdi:thermometer-low'
+            icon2: 'mdi:thermometer'
+            icon3: 'mdi:thermometer-alert'
+            severity:
+              green: 0
+              yellow: 30
+              red: 40
+              max: 50
+          - type: 'custom:tempometer-gauge-card'
+            entity: sensor.humunity_living
+            min: 0
+            max: 100
+            title: Living Hum
+            card_style: custom
+            icon1: 'mdi:water-check-outline'
+            icon2: 'mdi:water-percent'
+            icon3: 'mdi:water-percent-alert'
+            severity:
+              green: 0
+              yellow: 80
+              red: 90
+              max: 100
+          - type: 'custom:tempometer-gauge-card'
+            entity: sensor.pm_living
+            min: 0
+            max: 500
+            title: Living PM 2.5
+            card_style: custom
+            icon1: 'mdi:baby-face-outline'
+            icon2: 'mdi:emoticon-sick-outline'
+            icon3: 'mdi:face-mask'
+            severity:
+              green: 0
+              yellow: 26
+              red: 51
+              max: 500
+          - type: 'custom:tempometer-gauge-card'
+            entity: sensor.aqi_living
+            min: 0
+            max: 500
+            title: Living AQI
+            card_style: custom
+            icon1: 'mdi:baby-face-outline'
+            icon2: 'mdi:emoticon-sick-outline'
+            icon3: 'mdi:face-mask'
+            severity:
+              green: 0
+              yellow: 51
+              red: 101
+              max: 500
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:mini-graph-card'
+            entities:
+              - sensor.temprature_living
+            line_color: blue
+            line_width: 8
+            font_size: 75
+          - type: 'custom:mini-graph-card'
+            entities:
+              - sensor.humunity_living
+            line_color: '#e74c3c'
+            line_width: 8
+            font_size: 75
+          - type: 'custom:mini-graph-card'
+            entities:
+              - sensor.pm_living
+            line_color: var(--accent-color)
+            line_width: 8
+            font_size: 75
+      - type: 'custom:mini-graph-card'
+        name: Temprature
+        entities:
+          - entity: sensor.nha_realfeel_temperature
+            name: OutSide
+          - entity: sensor.temprature_living
+            name: Living
+          - entity: sensor.temprature_bedroom
+            name: BedRoom
+            y_axis: secondary
+        show:
+          labels: true
+          labels_secondary: true
+      - type: 'custom:tempometer-gauge-card'
+        entity: sensor.temprature_living
+        min: 0
+        max: 50
+        title: Power Meter
+        card_style: custom
+        icon1: 'mdi:flash-off'
+        icon2: 'mdi:flash-outline'
+        icon3: 'mdi:flash'
+        severity:
+          green: 0
+          yellow: 30
+          red: 40
+          max: 50
+      - type: 'custom:swipe-card'
+        card_width: 200px
+        start_card: 3
+        parameters:
+          effect: coverflow
+          grabCursor: true
+          centeredSlides: true
+          slidesPerView: auto
+          coverflowEffect:
+            rotate: 50
+            stretch: 0
+            depth: 100
+            modifier: 1
+            slideShadows: true
+          pagination:
+            type: bullets
+        cards:
+          - type: 'custom:mini-graph-card'
+            name: Temp
+            entities:
+              - sensor.temprature_living
+            line_color: yellow
+            line_width: 8
+            font_size: 75
+          - type: 'custom:mini-graph-card'
+            name: Hum
+            entities:
+              - sensor.humunity_living
+            line_color: blue
+            line_width: 8
+            font_size: 75
+          - type: 'custom:mini-graph-card'
+            name: PM 2.5
+            entities:
+              - sensor.pm_living
+            line_color: blue
+            line_width: 8
+            font_size: 75
+          - type: 'custom:mini-graph-card'
+            name: AQI
+            entities:
+              - sensor.aqi_living
+            line_color: blue
+            line_width: 8
+            font_size: 75
+      - type: 'custom:mini-graph-card'
+        name: Humunity
+        entities:
+          - entity: sensor.humunity_living
+            name: Living
+          - entity: sensor.humunity_bedroom
+            name: BedRoom
+            y_axis: secondary
+        show:
+          labels: true
+          labels_secondary: true
+      - type: 'custom:mini-graph-card'
+        name: Corana virus
+        entities:
+          - entity: sensor.vietnam_coronavirus_confirmed
+            name: Tổng số ca mắc
+          - entity: sensor.vietnam_coronavirus_current
+            name: Số ca mắc hiện tại
+          - entity: sensor.vietnam_coronavirus_recovered
+            name: Số ca phục hồi
+          - entity: sensor.vietnam_coronavirus_deaths
+            name: Số ca tử vong
+            y_axis: secondary
+        show:
+          labels: true
+          labels_secondary: true
+  - badges: []
+    cards:
+      - type: 'custom:mini-graph-card'
+        entities:
+          - entity: sensor.vietnam_coronavirus_confirmed
+        hours_to_show: 720
+        aggregate_func: max
+        group_by: date
+        show:
+          graph: bar
+      - type: 'custom:mini-graph-card'
+        entities:
+          - entity: sensor.nha_realfeel_temperature
+            name: Temprature
+          - entity: sensor.temprature_living
+            name: Living
+          - entity: sensor.temprature_bedroom
+            name: BedRoom
+            y_axis: secondary
+        show:
+          labels: true
+          labels_secondary: true
+      - type: 'custom:mini-graph-card'
+        entities:
+          - entity: sensor.vietnam_coronavirus_current
+        hours_to_show: 720
+        aggregate_func: max
+        group_by: date
+        show:
+          graph: bar
+      - type: 'custom:mini-graph-card'
+        name: Humunity
+        entities:
+          - entity: sensor.humunity_living
+            name: Living
+          - entity: sensor.humunity_bedroom
+            name: BedRoom
+            y_axis: secondary
+        show:
+          labels: true
+          labels_secondary: true
+      - type: 'custom:mini-graph-card'
+        entities:
+          - entity: sensor.vietnam_coronavirus_deaths
+        hours_to_show: 720
+        aggregate_func: max
+        group_by: date
+        show:
+          graph: bar
+      - type: 'custom:mini-graph-card'
+        entities:
+          - entity: sensor.vietnam_coronavirus_recovered
+        hours_to_show: 720
+        aggregate_func: max
+        group_by: date
+        show:
+          graph: bar
+title: 'Smart Home '
